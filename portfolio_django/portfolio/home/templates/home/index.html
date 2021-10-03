@@ -1,0 +1,20 @@
+{% extends 'home/home_base.html' %}
+
+{% load static %}
+
+{% block list_projects %}
+
+{% for projeto in projetos %}
+<div class="list-item py-6" id="projeto-{{ projeto.id }}">
+    {% if projeto.id < 10 %}
+    <h5 class="color-gray mr-2"><id>0{{ projeto.id }}.</h5>
+        {% else %}
+        <h5 class="color-gray mr-2"><id>{{ projeto.id }}.</h5>
+            {% endif %}
+            <a href= "{% url 'home:projetos_detail' projeto.id %}" target="_blank" class="link-projeto">
+                <h3>{{ projeto.titulo }}</h3>
+            </a>
+            <img src="{{ projeto.capa_path }}"class="img-project" alt="">
+        </div>
+    {% endfor %}
+{% endblock %}
