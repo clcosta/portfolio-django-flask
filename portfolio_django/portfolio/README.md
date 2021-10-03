@@ -10,7 +10,7 @@ Neste arquivo você encontrará todas as especificações do site com o django. 
 1. Primeiramente caso já não tenha feito você pode clonar este repositório.
 
 ```
-$ git clone https://github.com/clcosta/sites_django_flask
+$ git clone https://github.com/clcosta/portfolio-django-flask.git
 ```
 
 2. Agora a instalação das bibliotecas   
