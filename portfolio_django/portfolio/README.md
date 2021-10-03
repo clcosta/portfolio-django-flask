@@ -40,7 +40,8 @@ Como é esperado em um site de portfolio você tem que mostrar todos os seus pro
  *vamos utilizar o db.sqlite mesmo, padrão do django*
 ```sh
 py manage.py makemigrations
-
+```
+```
 py manage.py migrate
 ```
 __Se não tiver ocorrido nenhum problema, você tera um arquivo novo criado, chamado <ins>db.sqlite3</ins>, ele é o nosso banco de dados.__   
