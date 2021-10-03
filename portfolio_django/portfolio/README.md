@@ -16,14 +16,14 @@ $ git clone https://github.com/clcosta/sites_django_flask
 2. Agora a instalação das bibliotecas   
 __Com a intenção de diminuir o requirements.txt eu criei uma versão para cada framework, então certifique-se de instalar o requirements do *DJANGO* que está neste mesmo diretorio.__
 
-```python
+```sh
 pip install -r requirements.txt
 ```
 
 3. Subir o servidor     
 __Como estamos lidando com um site, vamos subir o servidor local, para isso no seu terminal utilize o comando__
 
-```python
+```sh
 py manage.py runserver
 ```
 
@@ -38,7 +38,7 @@ Como é esperado em um site de portfolio você tem que mostrar todos os seus pro
 
 1. ### Criando o banco de dados
  *vamos utilizar o db.sqlite mesmo, padrão do django*
-```python
+```sh
 py manage.py makemigrations
 
 py manage.py migrate
@@ -48,7 +48,7 @@ __Se não tiver ocorrido nenhum problema, você tera um arquivo novo criado, cha
 2. ### Criando um administrador
 *por segurança, o unico tipo de usuario que pode ser criado nesse projeto é um __superuser__, um administrador criado direto no terminal da aplicação. Já que não é um site com objetivo de ter um fluxo de usuarios, ou sejá, sem criação de contas.*
 
-```python
+```sh
 py manage.py createsuperuser
 ```
 __Você poderá criar uma conta de administrador com usuario, senha e e-mail (apesar de não ser necessário e-mail)__  
