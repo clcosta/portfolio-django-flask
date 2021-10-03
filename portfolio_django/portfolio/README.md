@@ -94,7 +94,9 @@ __No painel de admin do site, você consegue acesso a todos os projetos, e suas 
   _Detalhes do projeto_:   
   ![admin](git_apresentation/adm_panel2.png)
 
+## Detalhes do projeto
 
+Todos os projetos tem uma página de renderização dos seus detalhes, na página principal, depois de ter os projetos adicionado é só clicar no nome do projeto que ela será renderizada.
 
 # Referências
 
