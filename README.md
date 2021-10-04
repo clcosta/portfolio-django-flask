@@ -44,6 +44,9 @@ pip install -r requirements.txt
 
 _A forma de utilizar de cada framework está diferente. No Django temos o painel de admin e as especificações de uma conta ADMIN, já no flask utilizei da facilidade de criação de REST API para a criação dos projetos. Então como cada framework tem suas especialidades, sendo assim foi criado um arquivo **README.md** em cada pasta com os detalhes de cada aplicação_ 
 
+# Curiosidade
+Os códigos apresentados neste repositorio são os mesmos códigos que eu utilizo no meu [site portfolio](https://portfolio-claudio.herokuapp.com)!!
+
 # Autor
 | [<img src="https://avatars.githubusercontent.com/u/83929403?v=4" width=120><br><sub>@clcostaf</sub>](https://github.com/clcosta) |
 | :---: |
