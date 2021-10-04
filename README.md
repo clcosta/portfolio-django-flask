@@ -1,14 +1,14 @@
 # Bem vindo ao **Portfolio com Django E Flask**!
 <p><img height="20" src="https://img.shields.io/badge/Version-v1.0-blue"/></p>
 
-A criação de sites em Python é algo extremamente valioso, então quando eu comecei na linguagem aprendi com o **FLASK**, então criei um site estático, onde uma requsição renderiza um _html_ bruto. Porém comecei a estudar o **DJANGO** e decidi recriar o site com o framework, e criar um repositório com os dois arquivos, focando nas peculiaridades de cada framework.
+A criação de sites em Python é algo extremamente valioso, então quando eu comecei na linguagem aprendi com o **FLASK**, então criei um site estático, onde uma requisição renderiza um _html_ bruto. Porém comecei a estudar o **DJANGO** e decidi recriar o site com o framework, e criar um repositório com os dois arquivos, focando nas peculiaridades de cada framework.
 ## Redes Sociais
 * [Site](https://portfolio-claudio.herokuapp.com)
 * [Instagram](https://www.instagram.com/claudiogfez/)
 * [Linkedin](https://www.linkedin.com/in/clcostaf/)
 
 # Pré requisitos
-```console
+```
 python 3.x
 ```
 _OBS: Checar as versões dos frameworks nos requirements.txt_
@@ -16,7 +16,7 @@ _OBS: Checar as versões dos frameworks nos requirements.txt_
 
 1. Primeiramente você pode clonar este repositório.
 
-```console
+```
 git clone https://github.com/clcosta/portfolio-django-flask.git
 ```
 
@@ -24,7 +24,7 @@ git clone https://github.com/clcosta/portfolio-django-flask.git
 
 _OBS: Recomendo entrar no diretorio de cada framework para rodar a aplicação_
 - ### Django
-```console
+```
 pip install -r ./portfolio_django/portfolio/requirements.txt
 
     ou se estiver no diretorio
@@ -32,7 +32,7 @@ pip install -r ./portfolio_django/portfolio/requirements.txt
 pip install -r requirements.txt
 ```
 - ### Flask
-```console
+```
 pip install -r ./portfolio_flask/portfolio/requirements.txt
 
     ou se estiver no diretorio
