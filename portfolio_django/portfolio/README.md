@@ -31,14 +31,13 @@ py manage.py runserver
 *OBS: Por padrão deste repositorio, o modo DEBUG é desativado*.
 
 # Funcionalidades
-Com tudo já instalado e o servidor local rodando o site vamos ver o que podemos fazer.
----
+**Com tudo já instalado e o servidor local rodando o site vamos ver o que podemos fazer.**
 
 Como é esperado em um site de portfolio você tem que mostrar todos os seus projetos, o usuario já na página principal tem que conseguir ver um pouco sobre você e seus projetos. Como não irei upar o meu banco de dados neste repositorio vou refazer todo o passo a passo para upar os projetos no site.   
 
 1. ### Criando o banco de dados
  *vamos utilizar o db.sqlite mesmo, padrão do django*
-```sh
+```
 py manage.py makemigrations
 ```
 ```
