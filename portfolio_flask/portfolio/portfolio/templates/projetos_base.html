@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>Claudio Lima - Portfólio</title>
-    {% load static %}
-    <link rel="shortcut icon" href="{% static '/home/img/icon.ico' %}">
-    <link rel= "stylesheet" type= "text/css" href="{% static '/home/css/style.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Roboto&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title -->
+        <title>{% block page_title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ url_for('static',filename='/img/icon.ico') }}">
+        <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='/css/style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Roboto&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+    </head>
+    
 
-<body>
+<body>  
     <!-- HEADER -->
     <header class="menu-videos">
         <div class="menu-left">
-            <a href="{% url 'home:index' %}" class="link menu-1">Início</a>
+            <a href="{{ url_for('index') }}" class="link menu-1">Início</a>
         </div>
         <div class="menu-logo">
             <h5 class="menu-3">Claudio</h5>

@@ -1,17 +1,17 @@
-{% extends 'home/projetos_base.html' %}
+{% extends 'projetos_base.html' %}
 
-{% load static %}
+{% block page_title %}Claudio lima - {{ projeto.titulo }}{% endblock %}
+{% block title_video %}{{ projeto.titulo }}{% endblock %}
 
-{% block title_video %}{{ projetos_detail.titulo }}{% endblock %}
 
 {% block video %}
-    {% autoescape off %}
-    {{ projetos_detail.iframe_video }}
+    {% autoescape false %}
+    {{ projeto.iframe_video }}
     {% endautoescape %}
 {% endblock %}
 
 {% block codigo %}
-<div class="text-center"><a href="{{ projetos_detail.link_codigo }}" class="git" target="_blank" id="git-button">Ir para GitHub</a></div>
+<div class="text-center"><a href="{{ projeto.link_codigo }}" class="git" target="_blank" id="git-button">Ir para GitHub</a></div>
 {% endblock %}
 
 

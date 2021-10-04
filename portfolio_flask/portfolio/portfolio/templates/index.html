@@ -1,4 +1,17 @@
 {% extends 'home_base.html' %}
 
 {% block list_projects %}
+    {% for projeto in projetos %}
+    <div class="list-item py-6" id="projeto-{{ projeto.id }}">
+        {% if projeto.id < 10 %}
+        <h5 class="color-gray mr-2">0{{ projeto.id }}.</h5>
+            {% else %}
+        <h5 class="color-gray mr-2">{{ projeto.id }}.</h5>
+        {% endif %}
+            <a href="{{ url_for('detail_projeto', id=projeto.id)}}" target="_blank" class="link-projeto">
+                <h3>{{ projeto.titulo }}</h3>
+            </a>
+            <img src="{{ projeto.capa }}" class="img-project" alt="">
+    </div>
+    {% endfor %}
 {% endblock %}

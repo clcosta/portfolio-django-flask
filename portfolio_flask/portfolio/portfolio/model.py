@@ -1,5 +1,11 @@
-from .settings import db
+from portfolio import app 
+from flask_sqlalchemy import SQLAlchemy
 
+db = SQLAlchemy(app)
+
+def configure(app):
+    db.init_app(app)
+    app.db = db
 
 class Projeto(db.Model):
     id = db.Column(
@@ -30,4 +36,3 @@ class Projeto(db.Model):
         nullable=False,
         unique=True,
     )
-
