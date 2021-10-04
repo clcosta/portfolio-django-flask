@@ -1,28 +1,28 @@
 # Bem vindo ao **Portfolio com o FLASK**!
 <p><img height="20" src="https://img.shields.io/badge/Version-1.0-blue"/></p>
 
-Neste arquivo você encontrará todas as especificações do site com o django. Como utilizar em servidor, e claro como utilizar todas as funcionalidades.Como o Flask tem o foco em **microsserviços** foi criado uma REST API.   
+Neste arquivo você encontrará todas as especificações do site com o Flask. Como utilizar em servidor, e claro como utilizar todas as funcionalidades.
 --
 ---
 ## Instalação
 
 1. Primeiramente caso já não tenha feito você pode clonar este repositório.
 
-```console
+```
 $ git clone https://github.com/clcosta/portfolio-django-flask.git
 ```
 
 2. Agora a instalação das bibliotecas   
 __Com a intenção de diminuir o requirements.txt eu criei uma versão para cada framework, então certifique-se de instalar o requirements do *FLASK* que está neste mesmo diretorio.__
 
-```console
+```
 pip install -r requirements.txt
 ```
 
 3. Subir o servidor     
 __Como estamos lidando com um site, vamos subir o servidor local, para isso no seu terminal utilize o comando__
 
-```console
+```
 py app.py
 ```
 
@@ -30,37 +30,35 @@ py app.py
 *OBS: Por padrão deste repositorio, o modo DEBUG é desativado*.
 
 # Funcionalidades
-Com tudo já instalado e o servidor local rodando o site vamos ver o que podemos fazer.
----
+**Com tudo já instalado e o servidor local rodando o site vamos ver o que podemos fazer.**
 
 Como é esperado em um site de portfolio você tem que mostrar todos os seus projetos, o usuario já na página principal tem que conseguir ver um pouco sobre você e seus projetos. Como não irei upar o meu banco de dados neste repositorio vou refazer todo o passo a passo para upar os projetos no site.   
 
 1. ### Criando o banco de dados
- *vamos utilizar o **SQL Alchemy** mesmo, padrão do flask*
-```console
-flask db init
+ *vamos utilizar o **SQL Alchemy** mesmo, padrão do flask*   
+no terminal digite a seguinte linha de comando:
 ```
-```console
 flask db migrate
 ```
+_OBS: Caso faça alguma alteração no model.py será necessário refazer o migrations, você pode consultar neste [link](https://flask-migrate.readthedocs.io/en/latest/)_
 
 __Se não tiver ocorrido nenhum problema, você tera um arquivo novo criado na <ins>pasta portfolio</ins>, chamado <ins>db.db</ins>, ele é o nosso banco de dados.__   
 
 2. ### Obtendo Credenciais
-*a unica maneira de criar projetos é por uma **REST API**, que por segurança necessita de uma credencial para funcionar. Eu recomendo criar um arquivo **credentials.json** com a variável <ins>API_KEY</ins>, ou um arquivo **.env** com a mesma variável. Pórem caso queira é so entrar no arquivo **portfolio/routes.py***
+*a unica maneira de criar projetos é por uma **REST API**, que por segurança necessita de uma credencial para funcionar. Eu recomendo criar um arquivo **credentials.json** com a variável <ins>API_KEY</ins>, ou um arquivo **.env** com a mesma variável. Pórem caso queira defini-la manualmente é so entrar no arquivo **portfolio/routes.py***
 
 ### credentials.json
 ```json
 {
-    "API_KEY": SUA CHAVE AQUI
+    "API_KEY": <SEUTOKEN>
 }
 ```
 
 ### .env
-```env
+```
 API_KEY = SUA CHAVE AQUI
 ```
-__Não Mostre sua API_KEY a todos, quem tiver acesso a ela poderá criar, editar, deletar todos os seus projetos__   
+🔻 __Não Mostre sua API_KEY a todos, quem tiver acesso a ela poderá criar, editar, deletar todos os seus projetos__   
 
 3. ### Criando um projeto
 *No meu portfolio eu escolhi alguns campos para apresentar o meu projeto, sendo todos eles obrigatorios:*   
@@ -77,11 +75,11 @@ __Não Mostre sua API_KEY a todos, quem tiver acesso a ela poderá criar, editar
 | --------- | ----------------------- | ----- | ------------ |
 | Criar     | /projeto/new            | SIM   | POST         |
 | Listar    | /projetos               | Não   | GET          |
-| Atualizar | /projeto/atualizar/id   | SIM   | PATCH, POST  |
-| Deletar   | /projeto/deletar/id     | SIM   | GET          |
+| Atualizar | /projeto/atualizar/< id >   | SIM   | PATCH, POST  |
+| Deletar   | /projeto/deletar/< id >     | SIM   | GET          |
 
 ## Token
-__O Token: NÃO__ é uma informação que deve ser pública, só você terá acesso,
+🔻 __O Token: NÃO__ é uma informação que deve ser pública, só você terá acesso,
 o token que está no seu arquivo *credentials.json* tem que ser utilizado em todo *end point* que for necessário o token, acima tem uma tabela com todos eles e quais precisam do token.
 
 ### Exemplos:
