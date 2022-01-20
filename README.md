@@ -3,7 +3,6 @@
 
 A criação de sites em Python é algo extremamente valioso, então quando eu comecei na linguagem aprendi com o **FLASK**, então criei um site estático, onde uma requisição renderiza um _html_ bruto. Porém comecei a estudar o **DJANGO** e decidi recriar o site com o framework, e criar um repositório com os dois arquivos, focando nas peculiaridades de cada framework.
 ## Redes Sociais
-* [Site](https://portfolio-claudio.herokuapp.com)
 * [Instagram](https://www.instagram.com/claudiogfez/)
 * [Linkedin](https://www.linkedin.com/in/clcostaf/)
 
